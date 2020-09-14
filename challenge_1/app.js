@@ -25,10 +25,12 @@ let gameValues = ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X'];
 var classClick = document.querySelectorAll('.test');
 
 classClick.forEach(item => {
+  var clicked = false;
   item.addEventListener('click', event => {
-    if (gameValues.length >= 1 && !item.clicked) {
+    if (gameValues.length >= 1 && !clicked) {
       var nextClickValue = gameValues.shift()
       item.innerHTML = nextClickValue;
+      clicked = true;
     }
   })
 })
