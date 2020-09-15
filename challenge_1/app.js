@@ -4,13 +4,14 @@
 function myTest() {
   console.log('It Is working here!');
   document.getElementById("test").innerHTML = "Hola, Mundo!";
+  console.log(document.getElementById("test").innerHTML);
 };
 
 //Invoke the myTest function
 myTest();
 
 
-//================== Cell Click Check ===================
+//================== ClassClick Check ===================
 
 let allValues = ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X'];
 
@@ -20,7 +21,6 @@ var gameValues; //Each game will extract values from this array
 var newGameVals = function () {
   gameValues = allValues.slice();
 };
-
 newGameVals();
 
 
@@ -30,6 +30,7 @@ var classClick = document.querySelectorAll('.test');
 
 classClick.forEach(item => {
   // var clicked = false;
+
   item.addEventListener('click', event => {
     if (gameValues.length >= 1) {
       var nextClickValue = gameValues.shift()
