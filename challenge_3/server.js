@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 //Serve up local files
-// app.use('/static', express.static('public'))
+app.use('/', express.static('public'))
 
 
 app.get('/', (req, res) => {

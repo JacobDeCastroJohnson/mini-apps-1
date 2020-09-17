@@ -1,24 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from '../public/react.development.js';
+// import ReactDOM from '../public/react-dom.development.js';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
 
     }
-    //THIS BINDING FOR APP METHODS
+    //THIS BINDING FOR APP METHODS Test 2
   }
 
   render() {
-//test
+    return (
+    <h1> Connected Front End to Server!!!</h1>
+    )
   };
-
 
 }
 
 //ReactDOM Render
-reactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
 
 
